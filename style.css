@@ -1,0 +1,134 @@
+/* =======================================================
+        button.custom : the button to open the select menu
+            ul.custom : the select menu, hidden by default
+     ul.custom.active : select menu shown
+         ul.custom li : the select options
+ul.custom li.selected : the selected option
+======================================================= */
+
+.custom {
+  font:.85em "lucida grande", helvetica, arial, sans-serif;
+}
+select.hidden, ul.custom, button.custom::before, button.custom::after {
+  position:absolute;
+}
+select.hidden {
+  top:-8000px;
+}
+button.custom {
+  position:relative;
+  margin:50px 45px;
+  padding:1px 25px 2px 7px;
+  border:1px solid #ccc;
+  border-bottom-color:#bbb;
+  background:-webkit-linear-gradient(#fff, #eee);
+  background:-moz-linear-gradient(#fff, #eee);
+  background:-ms-linear-gradient(#fff, #eee);
+  background:-o-linear-gradient(#fff, #eee);
+  background:linear-gradient(#fff, #eee);
+  border-radius:5px;
+  box-shadow:0 1px 0 rgba(0,0,0,.05);
+}
+button.custom::before, button.custom::after {
+  content:"";
+  width:6px;
+  height:8px;
+  right:6px;
+  background-repeat:no-repeat;
+  background-position:0 0, 2px 0;
+  background-size:50% 50%;
+}
+button.custom::before {
+  top:4px;
+  background-image:-webkit-linear-gradient(-45deg, transparent 50%, #cacaca 50%),
+                   -webkit-linear-gradient(45deg, #cacaca 50%, transparent 50%);
+  background-image:-moz-linear-gradient(-45deg, transparent 50%, #cacaca 50%),
+                   -moz-linear-gradient(45deg, #cacaca 50%, transparent 50%);
+  background-image:-ms-linear-gradient(-45deg, transparent 50%, #cacaca 50%),
+                   -ms-linear-gradient(45deg, #cacaca 50%, transparent 50%);
+  background-image:-o-linear-gradient(-45deg, transparent 50%, #cacaca 50%),
+                   -o-linear-gradient(45deg, #cacaca 50%, transparent 50%);
+  background-image:linear-gradient(-45deg, transparent 50%, #cacaca 50%),
+                   linear-gradient(45deg, #cacaca 50%, transparent 50%);
+}
+button.custom::after {
+  bottom:1px;
+  background-image:-webkit-linear-gradient(45deg, transparent 50%, #cacaca 50%),
+                   -webkit-linear-gradient(-45deg, #cacaca 50%, transparent 50%);
+  background-image:-moz-linear-gradient(45deg, transparent 50%, #cacaca 50%),
+                   -moz-linear-gradient(-45deg, #cacaca 50%, transparent 50%);
+  background-image:-ms-linear-gradient(45deg, transparent 50%, #cacaca 50%),
+                   -ms-linear-gradient(-45deg, #cacaca 50%, transparent 50%);
+  background-image:-o-linear-gradient(45deg, transparent 50%, #cacaca 50%),
+                   -o-linear-gradient(-45deg, #cacaca 50%, transparent 50%);
+  background-image:linear-gradient(45deg, transparent 50%, #cacaca 50%),
+                   linear-gradient(-45deg, #cacaca 50%, transparent 50%);
+}
+button.custom:active {
+  border-top-color:#a5a5a5;
+  box-shadow:inset 0 1px 3px rgba(0,0,0,.2);
+}
+ul.custom {
+  margin:-6px 0 0 -4px;
+  padding:5px;
+  list-style:none;
+  z-index:10000;
+  pointer-events:none;
+  opacity:0;
+  background:rgba(253,253,253,.97);
+  border-radius:5px;
+  box-shadow:inset 0 1px 0 #fff, 0 1px 3px rgba(0,0,0,.35);
+  -webkit-transform:scale(.95) translateY(-8px);
+  -webkit-transition-property:-webkit-transform,opacity;
+  -webkit-transition-duration:.2s;
+  -webkit-transition-timing-function:cubic-bezier(.455,.03,.515,.955);
+  -moz-transform:scale(.95) translateY(-8px);
+  -moz-transition-property:-moz-transform,opacity;
+  -moz-transition-duration:.2s;
+  -moz-transition-timing-function:cubic-bezier(.455,.03,.515,.955);
+  -ms-transform:scale(.95) translateY(-8px);
+  -ms-transition-property:-ms-transform,opacity;
+  -ms-transition-duration:.2s;
+  -ms-transition-timing-function:cubic-bezier(.455,.03,.515,.955);
+  -o-transform:scale(.95) translateY(-8px);
+  -o-transition-property:-o-transform,opacity;
+  -o-transition-duration:.2s;
+  -o-transition-timing-function:cubic-bezier(.455,.03,.515,.955);
+  transform:scale(.95) translateY(-8px);
+  transition-property:transform,opacity;
+  transition-duration:.2s;
+  transition-timing-function:cubic-bezier(.455,.03,.515,.955);
+}
+ul.custom.active {
+  opacity:1;
+  -webkit-transform:scale(1) translateY(0);
+  -moz-transform:scale(1) translateY(0);
+  -ms-transform:scale(1) translateY(0);
+  -o-transform:scale(1) translateY(0);
+  transform:scale(1) translateY(0);
+  pointer-events:auto;
+}
+ul.custom li {
+  padding:3px 5px;
+  border:1px solid transparent;
+  border-radius:3px;
+  cursor:default;
+}
+ul.custom.active li:hover {
+  color:#fff;
+  border-color:#44A2E4;
+  border-bottom-color:#1076C7;
+  box-shadow:inset 0 1px 0 #5AB9EE;
+  background:-webkit-linear-gradient(#52B0E9, #0782D7);
+  background:-moz-linear-gradient(#52B0E9, #0782D7);
+  background:-ms-linear-gradient(#52B0E9, #0782D7);
+  background:-o-linear-gradient(#52B0E9, #0782D7);
+  background:linear-gradient(#52B0E9, #0782D7);
+}
+ul.custom li.selected {
+  font-weight:700;
+}
+ul.custom li.selected::before {
+  content:"✓";
+  margin-right:5px;
+}
