@@ -2,7 +2,7 @@
 
 A lightweight javascript library to easily customize selectboxes
 
-# Documentation
+## Documentation
 
 ###Plugin usage
 
