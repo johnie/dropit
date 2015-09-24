@@ -4,19 +4,19 @@
   ===========================================
 
   * Customize all select elements:
-    new CustomSelect()
+    new Dropit()
 
   * Customize only some select elements:
-    new CustomSelect("div#main select.fancy")
+    new Dropit("div#main select.fancy")
 
   * Change default classes:
-    new CustomSelect("select", {
+    new Dropit("select", {
       hiddenSelectClass   : "hidden",
-      customSelectClass   : "custom",
+      dropitClass   : "custom",
       activeListClass     : "active",
       selectedOptionClass : "selected"
     })
 
 */
 
-new CustomSelect()
+new Dropit()

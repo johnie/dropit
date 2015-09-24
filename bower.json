@@ -1,0 +1,31 @@
+{
+  "name": "dropit",
+  "version": "1.0.0",
+  "authors": [
+    "Johnie Hjelm <johnie.hjelm@symbio.com>"
+  ],
+  "description": "A super-small, non-dependent JavaScript framework that allows you to easily customize selectboxes",
+  "main": [
+    "dist/dropit.js",
+    "dist/dropit.min.js"
+  ],
+  "moduleType": [
+    "amd",
+    "es6"
+  ],
+  "keywords": [
+    "web",
+    "framework",
+    "html",
+    "select"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/johnie/dropit",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

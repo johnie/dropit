@@ -1,31 +1,52 @@
-# Customselect.js
+# dropit
 
-A lightweight javascript library to easily customize selectboxes
+A super-small, non-dependent JavaScript framework that allows you to easily customize selectboxes
+
+## Install
+
+**Bower**
+
+```bash
+$ bower install dropit
+```
+
+**npm**
+
+```bash
+$ npm install dropit
+```
 
 ## Documentation
 
-###Plugin usage
-
+### Plugin usage
 
 **Customize all select elements:**
-```
-var selectBoxes = new CustomSelect();
+
+```js
+var selectBoxes = new Dropit();
 ```
 
-**Customize only some select elements:**<br>
-```
-var selectBoxes = new CustomSelect("div#main select.fancy")
+**Customize only some select elements:**
+
+```js
+var selectBoxes = new Dropit('div#main select.fancy')
 ```
 
-**Change default classes:**<br>
-```
-var selectBoxes = new CustomSelect("select", {
-	hiddenSelectClass   : "hidden",
-	customSelectClass   : "custom",
-	activeListClass     : "active",
-	selectedOptionClass : "selected"
+**Change default classes:**
+
+```js
+var selectBoxes = new Dropit('select', {
+	hiddenSelectClass   : 'hidden',
+	dropitClass         : 'custom',
+	activeListClass     : 'active',
+	selectedOptionClass : 'selected'
 });
 ```
 
-## Licence
-customselect.js is freely distributable under the terms of the MIT licence.
+## Contribute
+
+See the [contributing guide](CONTRIBUTING.md)
+
+### Licence
+
+[MIT](licence) © Johnie Hjelm
