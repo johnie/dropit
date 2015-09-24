@@ -7,7 +7,7 @@ A super-small, non-dependent JavaScript framework that allows you to easily cust
 **Bower**
 
 ```bash
-$ bower install dropit
+$ bower install dropit.js
 ```
 
 **npm**
