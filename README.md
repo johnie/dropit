@@ -1,6 +1,6 @@
 # dropit
 
-A super-small, non-dependent JavaScript framework that allows you to easily customize selectboxes
+A super-small (1098 bytes gzipped), non-dependent JavaScript framework that allows you to easily customize selectboxes
 
 ## Install
 
